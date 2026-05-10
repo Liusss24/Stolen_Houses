@@ -1,0 +1,29 @@
+@reference "../../../app/globals.css";
+
+.footer {
+  @apply border-t;
+  border-color: var(--color-rule);
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-7xl flex-col items-center gap-3 px-6 py-12 text-center;
+}
+
+.rights {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.brand {
+  @apply text-3xl tracking-[0.28em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.tagline {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}

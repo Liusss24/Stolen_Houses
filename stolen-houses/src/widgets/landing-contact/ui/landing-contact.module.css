@@ -1,0 +1,47 @@
+@reference "../../../app/globals.css";
+
+.section {
+  background-color: var(--color-ink-deep);
+}
+
+.container {
+  @apply mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1fr_1.1fr] md:py-28;
+}
+
+.kicker {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply mt-3 text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-canvas);
+  font-family: var(--font-display);
+}
+
+.description {
+  @apply mt-3 max-w-md text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-canvas) 80%, transparent);
+  font-family: var(--font-body);
+}
+
+.infoList {
+  @apply mt-8 flex flex-col gap-5;
+}
+
+.infoItem {
+  @apply flex flex-col gap-1;
+}
+
+.infoLabel {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.infoValue {
+  @apply text-xl tracking-[0.04em] md:text-2xl;
+  color: var(--color-canvas);
+  font-family: var(--font-display);
+}

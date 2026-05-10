@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "title": "Casa Moderna en Escazú",
+    "price": 185000,
+    "location": "Escazú, San José",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 180,
+    "image": "/images/properties/casa-1.jpg",
+    "panorama": "/images/properties/casa-1-360.jpg",
+    "description": "Casa moderna con cochera, jardín y sala amplia.",
+    "featured": true,
+    "createdAt": "2026-04-21T20:00:00.000Z",
+    "updatedAt": "2026-04-21T20:00:00.000Z"
+  }
+]

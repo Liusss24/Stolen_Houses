@@ -1,0 +1,49 @@
+@reference "../../../app/globals.css";
+
+.searchCard {
+  @apply mt-12 rounded-[1.5rem] border p-4 shadow-[0_20px_40px_-30px_rgba(26,24,21,0.3)];
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.title {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.fields {
+  @apply mt-4 grid gap-3 md:grid-cols-[repeat(3,minmax(0,1fr))_auto];
+}
+
+.field {
+  @apply flex flex-col gap-1 rounded-xl border px-4 py-3;
+  border-color: var(--color-rule);
+  background-color: color-mix(in srgb, var(--color-canvas) 60%, transparent);
+}
+
+.label {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.input {
+  @apply w-full border-0 bg-transparent text-sm outline-none;
+  color: var(--color-ink);
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+}
+
+.submit {
+  @apply inline-flex items-center justify-center self-stretch rounded-xl px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.submit:hover {
+  background-color: var(--color-accent-deep);
+}

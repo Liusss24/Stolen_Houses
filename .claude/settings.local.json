@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(if \\(-Not \\(Test-Path \"C:\\\\Users\\\\Aaron\\\\.claude\\\\projects\\\\C--Users-Aaron-Documents-GitHub-Stolen-Houses\\\\memory\\\\\"\\)\\) { New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\Aaron\\\\.claude\\\\projects\\\\C--Users-Aaron-Documents-GitHub-Stolen-Houses\\\\memory\\\\\" | Out-Null }; ls \"C:\\\\Users\\\\Aaron\\\\.claude\\\\projects\\\\C--Users-Aaron-Documents-GitHub-Stolen-Houses\\\\memory\\\\\" | Select-Object Name)",
+      "PowerShell(cd \"C:\\\\Users\\\\Aaron\\\\Documents\\\\GitHub\\\\Stolen_Houses\\\\stolen-houses\"; npx tsc --noEmit; echo \"EXIT=$LASTEXITCODE\")",
+      "Bash(python -c \"import json, sys; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\)\")"
+    ]
+  }
+}

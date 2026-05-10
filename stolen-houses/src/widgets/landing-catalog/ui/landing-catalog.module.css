@@ -1,0 +1,63 @@
+@reference "../../../app/globals.css";
+
+.section {
+  background-color: var(--color-ink-deep);
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-20 md:py-28;
+}
+
+.headerRow {
+  @apply flex flex-col gap-6 md:flex-row md:items-end md:justify-between;
+}
+
+.kicker {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply mt-3 text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-canvas);
+  font-family: var(--font-display);
+}
+
+.description {
+  @apply mt-3 max-w-xl text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-canvas) 80%, transparent);
+  font-family: var(--font-body);
+}
+
+.controls {
+  @apply flex items-center gap-2;
+}
+
+.controlButton {
+  @apply inline-flex h-10 w-10 items-center justify-center rounded-md border transition;
+  border-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
+  background-color: transparent;
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.controlButton:hover {
+  background-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  border-color: var(--color-accent);
+}
+
+.controlButtonPrimary {
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  border-color: var(--color-accent);
+}
+
+.controlButtonPrimary:hover {
+  background-color: var(--color-accent-deep);
+  color: var(--color-canvas);
+}
+
+.grid {
+  @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}

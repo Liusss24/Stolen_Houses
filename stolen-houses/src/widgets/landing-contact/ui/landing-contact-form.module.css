@@ -1,0 +1,64 @@
+@reference "../../../app/globals.css";
+
+.form {
+  @apply flex flex-col gap-4 rounded-[1.5rem] border p-6;
+  border-color: color-mix(in srgb, var(--color-accent) 28%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 92%, var(--color-ink));
+}
+
+.field {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.input {
+  @apply w-full rounded-xl border px-4 py-3 text-sm outline-none transition;
+  border-color: color-mix(in srgb, var(--color-accent) 22%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 60%, transparent);
+  color: var(--color-canvas);
+  font-family: var(--font-body);
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 80%, transparent);
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--color-canvas) 45%, transparent);
+}
+
+.fieldRow {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.textarea {
+  @apply min-h-[140px] resize-y;
+}
+
+.submitRow {
+  @apply mt-2 flex items-center justify-between gap-3;
+}
+
+.submit {
+  @apply inline-flex items-center gap-2 rounded-md px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.submit:hover {
+  background-color: var(--color-accent-deep);
+  color: var(--color-canvas);
+}
+
+.success {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-accent);
+  font-family: var(--font-geist-mono), monospace;
+}

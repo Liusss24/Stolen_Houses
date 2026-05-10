@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
+@theme {
+  --color-canvas: #f3ead7;
+  --color-paper: #f8f1de;
+  --color-ink: #1a3a3a;
+  --color-ink-deep: #0f2424;
+  --color-ink-soft: #3a5959;
+  --color-ink-mid: #1a5a5a;
+  --color-muted: #3a5959;
+  --color-rule: #1a3a3a2e;
+  --color-accent: #dcc189;
+  --color-accent-deep: #c8a24b;
+
+  --font-display:
+    var(--font-limelight), var(--font-cinzel),
+    "Limelight", "Cinzel", "Times New Roman", serif;
+  --font-italic:
+    var(--font-cormorant), "Cormorant Garamond", "Georgia", serif;
+  --font-body:
+    var(--font-cormorant), "Cormorant Garamond", "Georgia", serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
   font-family: Arial, Helvetica, sans-serif;
 }

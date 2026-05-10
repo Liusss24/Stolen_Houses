@@ -1,0 +1,113 @@
+@reference "../../../app/globals.css";
+
+.panel {
+  @apply rounded-[1.5rem] border p-8;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 35%, transparent);
+}
+
+.sectionTitle {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.loadingText,
+.emptyText {
+  @apply mt-6 text-sm;
+  color: color-mix(in srgb, var(--color-ink) 70%, transparent);
+  font-family: var(--font-body);
+}
+
+.cardsGrid {
+  @apply mt-6 grid gap-4;
+}
+
+.card {
+  @apply grid gap-3 rounded-2xl border p-5;
+  border-color: var(--color-rule);
+  background-color: color-mix(in srgb, var(--color-canvas) 60%, transparent);
+}
+
+.cardHeader {
+  @apply flex items-start justify-between gap-3;
+}
+
+.cardTitleBlock {
+  @apply min-w-0 grid gap-1;
+}
+
+.cardTitle {
+  @apply text-xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.cardLocation {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.featuredBadge {
+  @apply inline-flex items-center rounded-md px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.cardDetails {
+  @apply space-y-1 text-sm;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.cardLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.cardDescription {
+  @apply mt-2 text-sm leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+  font-family: var(--font-body);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.cardActions {
+  @apply mt-4 flex flex-wrap gap-3;
+}
+
+.editButton {
+  @apply inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.editButton:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.deleteButton {
+  @apply inline-flex items-center gap-2 rounded-md border px-5 py-2.5 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.deleteButton:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,30 @@
+@reference "../../../app/globals.css";
+
+.section {
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-20 md:py-28;
+}
+
+.intro {
+  @apply flex flex-col items-center gap-3 text-center;
+}
+
+.kicker {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply max-w-3xl text-3xl tracking-normal md:text-5xl;
+  color: var(--color-ink);
+  font-family: var(--font-italic);
+  font-style: italic;
+}
+
+.grid {
+  @apply grid gap-6 md:grid-cols-3;
+}

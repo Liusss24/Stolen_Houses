@@ -1,0 +1,95 @@
+@reference "../../../app/globals.css";
+
+.card {
+  @apply flex flex-col overflow-hidden rounded-md border transition;
+  border-color: color-mix(in srgb, var(--color-accent) 22%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 92%, var(--color-ink));
+}
+
+.card:hover {
+  @apply -translate-y-1;
+  border-color: var(--color-accent);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 70%, transparent);
+}
+
+.media {
+  @apply relative aspect-[4/3] overflow-hidden;
+  background-color: var(--color-ink-deep);
+}
+
+.image {
+  @apply h-full w-full object-cover transition duration-500;
+}
+
+.card:hover .image {
+  @apply scale-[1.04];
+}
+
+.mediaScrim {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--color-ink-deep) 80%, transparent),
+    transparent 45%
+  );
+}
+
+.mediaLabel {
+  @apply absolute left-4 top-4 inline-flex items-center rounded-sm border px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  border-color: color-mix(in srgb, var(--color-accent) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 80%, transparent);
+  color: var(--color-accent);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.featuredBadge {
+  @apply absolute left-4 top-4 inline-flex items-center rounded-sm px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.categoryBadge {
+  @apply absolute right-4 top-4 inline-flex items-center rounded-sm px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.body {
+  @apply flex flex-col gap-3 p-6;
+}
+
+.indexLine {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.name {
+  @apply text-3xl tracking-[0.04em];
+  color: var(--color-canvas);
+  font-family: var(--font-display);
+}
+
+.location {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.priceRow {
+  @apply mt-2 flex items-end justify-between gap-3;
+}
+
+.price {
+  @apply text-2xl tracking-[0.04em] md:text-3xl;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+}
+
+.specs {
+  @apply text-[11px] uppercase tracking-[0.28em];
+  color: color-mix(in srgb, var(--color-canvas) 80%, transparent);
+  font-family: var(--font-geist-mono), monospace;
+}

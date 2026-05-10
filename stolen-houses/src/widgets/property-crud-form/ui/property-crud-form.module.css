@@ -1,0 +1,113 @@
+@reference "../../../app/globals.css";
+
+.panel {
+  @apply rounded-[1.5rem] border p-8;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 35%, transparent);
+}
+
+.sectionTitle {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.form {
+  @apply mt-6 grid gap-4;
+}
+
+.fieldGroup {
+  @apply grid gap-1.5;
+}
+
+.fieldsGrid {
+  @apply grid gap-3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.label {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.input {
+  @apply w-full rounded-xl border px-4 py-3 text-sm outline-none transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.input:focus {
+  border-color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+}
+
+.textArea {
+  @apply w-full rounded-xl border px-4 py-3 text-sm outline-none transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  min-height: 140px;
+  resize: vertical;
+}
+
+.textArea:focus {
+  border-color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+.checkboxRow {
+  @apply flex items-center gap-3 text-sm;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.checkbox {
+  @apply h-4 w-4 rounded;
+  accent-color: var(--color-accent-deep);
+}
+
+.actions {
+  @apply flex flex-wrap gap-3 pt-2;
+}
+
+.primaryButton {
+  @apply inline-flex items-center gap-2 rounded-md px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.primaryButton:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.primaryButton:disabled {
+  @apply cursor-not-allowed opacity-60;
+}
+
+.secondaryButton {
+  @apply inline-flex items-center gap-2 rounded-md border px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+@media (max-width: 640px) {
+  .fieldsGrid {
+    grid-template-columns: 1fr;
+  }
+}

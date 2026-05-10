@@ -1,0 +1,18 @@
+@reference "../../../app/globals.css";
+
+.feedback {
+  @apply mb-6 rounded-xl border px-4 py-3 text-sm;
+  font-family: var(--font-body);
+}
+
+.feedbackSuccess {
+  border-color: color-mix(in srgb, var(--color-accent-deep) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  color: var(--color-ink-deep);
+}
+
+.feedbackError {
+  border-color: color-mix(in srgb, var(--color-ink) 70%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-soft) 18%, transparent);
+  color: var(--color-ink-deep);
+}

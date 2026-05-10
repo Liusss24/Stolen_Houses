@@ -1,0 +1,192 @@
+@reference "../../../app/globals.css";
+
+.panel {
+  @apply grid gap-5;
+}
+
+.header {
+  @apply flex flex-wrap items-end justify-between gap-3;
+}
+
+.title {
+  @apply text-3xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.summary {
+  @apply mt-1 text-sm leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+  font-family: var(--font-body);
+}
+
+.meta {
+  @apply flex items-center gap-2;
+}
+
+.metaBadge {
+  @apply inline-flex items-center rounded-md px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.note {
+  @apply rounded-xl border px-4 py-3 text-sm;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+  font-family: var(--font-body);
+}
+
+.status {
+  @apply rounded-2xl border border-dashed px-4 py-8 text-center text-sm;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.grid {
+  @apply grid gap-6;
+}
+
+.card {
+  @apply flex flex-col overflow-hidden rounded-[1.5rem] border transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.card:hover {
+  @apply -translate-y-1;
+  border-color: var(--color-accent-deep);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 45%, transparent);
+}
+
+.media {
+  @apply relative aspect-[4/3] overflow-hidden;
+  background-color: var(--color-ink);
+}
+
+.image {
+  @apply h-full w-full object-cover transition duration-500;
+}
+
+.card:hover .image {
+  @apply scale-[1.04];
+}
+
+.imageFallback {
+  @apply grid h-full w-full place-items-center text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-canvas);
+  background-color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.cardBody {
+  @apply grid gap-4 p-6;
+}
+
+.cardHeader {
+  @apply grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start;
+}
+
+.titleBlock {
+  @apply grid gap-1;
+}
+
+.cardTitle {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.location {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.badges {
+  @apply flex flex-wrap gap-2;
+}
+
+.badgePrimary,
+.badgeSecondary {
+  @apply inline-flex items-center rounded-md px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.badgePrimary {
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+}
+
+.badgeSecondary {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.priceBlock {
+  @apply grid gap-1;
+}
+
+.priceLabel {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.price {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.match {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.details {
+  @apply grid gap-3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detailItem {
+  @apply rounded-xl px-4 py-3;
+  background-color: color-mix(in srgb, var(--color-canvas) 60%, transparent);
+}
+
+.detailLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.detailValue {
+  @apply text-base;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.description {
+  @apply text-sm leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+  font-family: var(--font-body);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+}

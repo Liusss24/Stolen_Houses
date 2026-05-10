@@ -1,0 +1,45 @@
+@reference "../../../app/globals.css";
+
+.page {
+  @apply min-h-screen py-16;
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-6;
+}
+
+.header {
+  @apply mb-12 flex flex-col items-start gap-3;
+}
+
+.dividerRow {
+  @apply flex w-full items-center gap-3;
+}
+
+.divider {
+  @apply h-px flex-1;
+  background-color: var(--color-rule);
+}
+
+.badge {
+  @apply inline-flex items-center text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.badgeAccent {
+  color: var(--color-accent-deep);
+}
+
+.title {
+  @apply mt-2 text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.description {
+  @apply mt-2 max-w-3xl text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+  font-family: var(--font-body);
+}

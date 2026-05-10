@@ -1,0 +1,106 @@
+Listado de rutas de carpetas para el volumen SISTEMA
+El n£mero de serie del volumen es D607-B88B
+C:.
+|   estructura.txt
+|   
++---app
+|   |   favicon.ico
+|   |   globals.css
+|   |   layout.tsx
+|   |   page.tsx
+|   |   
+|   +---(admin)
+|   |   \---dashboard
+|   |       +---citas
+|   |       \---propiedades
+|   |               page.module.css
+|   |               page.tsx
+|   |               
+|   +---(public)
+|   |   |   page.tsx
+|   |   |   
+|   |   +---preseleccion
+|   |   |       page.tsx
+|   |   |       
+|   |   \---propiedades
+|   |       |   page.tsx
+|   |       |   
+|   |       \---(id)
+|   +---api
+|   |   \---properties
+|   |       |   route.ts
+|   |       |   
+|   |       \---[id]
+|   |               route.ts
+|   |               
+|   +---providers
+|   \---styles
++---assets
++---entities
+|   \---property
+|       +---api
+|       |       property.service.ts
+|       |       
+|       \---model
+|               property.constants.ts
+|               property.types.ts
+|               
++---features
+|   +---manage-opportunity-status
+|   +---manage-properties
+|   |   \---model
+|   |           property-crud.constants.ts
+|   |           property-crud.mapper.ts
+|   |           property-crud.types.ts
+|   |           use-property-crud.ts
+|   |           
+|   +---property-search
+|   +---schedule-appointment
+|   +---suggest-properties
+|   \---view-360
++---i18n
+|   +---en
+|   \---es
+|           property-crud.ts
+|           
++---shared
+|   +---config
+|   +---constants
+|   +---hooks
+|   +---lib
+|   |       parse-property-payload.ts
+|   |       properties-file.ts
+|   |       
+|   +---mocks
+|   +---services
+|   +---types
+|   +---ui
+|   |   \---feedback
+|   |           feedback.module.css
+|   |           feedback.tsx
+|   |           
+|   \---validation
++---store
++---tests
++---views
+|   +---appointments
+|   +---home
+|   +---opportunities
+|   \---properties
+\---widgets
+    +---appointments-table
+    +---filter-panel
+    +---footer
+    +---header
+    +---opportunity-board
+    +---property-catalog
+    +---property-crud-form
+    |   \---ui
+    |           property-crud-form.module.css
+    |           property-crud-form.tsx
+    |           
+    \---property-crud-list
+        \---ui
+                property-crud-list.module.css
+                property-crud-list.tsx
+                

@@ -1,0 +1,44 @@
+@reference "../../../app/globals.css";
+
+.card {
+  @apply flex flex-col gap-4 rounded-[1.5rem] border p-6;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.headRow {
+  @apply flex items-center justify-between text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.indexLine {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.quoteMark {
+  @apply text-4xl leading-none;
+  color: var(--color-accent-deep);
+  font-family: var(--font-display);
+}
+
+.quote {
+  @apply text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+  font-family: var(--font-italic);
+  font-style: italic;
+}
+
+.author {
+  @apply text-xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.role {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}

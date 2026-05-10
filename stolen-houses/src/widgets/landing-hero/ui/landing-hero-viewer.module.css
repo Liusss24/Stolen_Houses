@@ -1,0 +1,67 @@
+@reference "../../../app/globals.css";
+
+.viewer {
+  @apply relative overflow-hidden rounded-[2rem] border;
+  border-color: var(--color-rule);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 45%, transparent);
+  aspect-ratio: 4 / 5;
+  margin: 0;
+  background: var(--color-ink-deep);
+}
+
+.image {
+  @apply h-full w-full object-cover;
+  position: absolute;
+  inset: 0;
+}
+
+.scrim {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-ink-deep) 55%, transparent),
+    color-mix(in srgb, var(--color-ink-deep) 15%, transparent),
+    color-mix(in srgb, var(--color-ink-deep) 75%, transparent)
+  );
+}
+
+.label {
+  @apply absolute left-6 top-6 inline-flex items-center rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.4em];
+  border-color: color-mix(in srgb, var(--color-canvas) 40%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 55%, transparent);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.coreRing {
+  @apply absolute left-1/2 top-1/2 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border backdrop-blur-sm;
+  border-color: color-mix(in srgb, var(--color-canvas) 40%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 40%, transparent);
+}
+
+.coreRing::after {
+  content: "";
+  position: absolute;
+  inset: -1.25rem;
+  border-radius: 9999px;
+  border: 1px dashed rgba(243, 234, 215, 0.35);
+}
+
+.coreLabel {
+  @apply px-2 text-center text-xs uppercase tracking-[0.4em];
+  color: var(--color-canvas);
+  font-family: var(--font-display);
+}
+
+.footer {
+  @apply absolute inset-x-6 bottom-6 flex items-center justify-between text-[11px] uppercase tracking-[0.32em];
+  color: color-mix(in srgb, var(--color-canvas) 85%, transparent);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.controlChip {
+  @apply inline-flex h-7 w-7 items-center justify-center rounded-full border;
+  border-color: color-mix(in srgb, var(--color-canvas) 40%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 55%, transparent);
+  color: var(--color-canvas);
+}

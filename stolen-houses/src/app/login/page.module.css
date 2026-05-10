@@ -1,0 +1,8 @@
+@reference "../../app/globals.css";
+
+.panel {
+  @apply mx-auto w-full max-w-xl rounded-[1.5rem] border p-8;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 40%, transparent);
+}

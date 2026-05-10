@@ -1,0 +1,115 @@
+@reference "../../../app/globals.css";
+
+.panel {
+  @apply grid gap-6 rounded-[1.5rem] border p-6;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--color-ink-deep) 35%, transparent);
+}
+
+.header {
+  @apply grid gap-2;
+}
+
+.kicker {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.description {
+  @apply text-sm leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+  font-family: var(--font-body);
+}
+
+.form {
+  @apply grid gap-4;
+}
+
+.grid {
+  @apply grid gap-4;
+}
+
+.fieldGroup {
+  @apply grid gap-1.5;
+}
+
+.label {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.input {
+  @apply w-full rounded-xl border px-4 py-3 text-sm outline-none transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.input:focus {
+  border-color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+}
+
+.inlineField {
+  @apply grid items-center gap-3;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.helperText {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.checkboxRow {
+  @apply flex items-center gap-3 text-sm;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.checkbox {
+  @apply h-4 w-4 rounded;
+  accent-color: var(--color-accent-deep);
+}
+
+.actions {
+  @apply mt-2 flex;
+}
+
+.resetButton {
+  @apply inline-flex w-full items-center justify-center gap-2 rounded-md px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.resetButton:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

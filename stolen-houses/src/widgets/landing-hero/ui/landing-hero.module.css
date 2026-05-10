@@ -1,0 +1,118 @@
+@reference "../../../app/globals.css";
+
+.section {
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto grid w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.1fr_1fr] md:py-28;
+}
+
+.copy {
+  @apply flex flex-col gap-6;
+}
+
+.kicker {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-5xl leading-[1.05] tracking-[0.04em] md:text-7xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.titleItalic {
+  @apply mt-2 block text-4xl tracking-normal md:text-6xl;
+  color: var(--color-ink);
+  font-family: var(--font-italic);
+  font-style: italic;
+}
+
+.dividerRow {
+  @apply flex items-center gap-3;
+}
+
+.divider {
+  @apply h-px flex-1;
+  background-color: var(--color-rule);
+}
+
+.dividerLabel {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.description {
+  @apply max-w-xl text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+  font-family: var(--font-body);
+}
+
+.ctaRow {
+  @apply flex flex-wrap gap-3;
+}
+
+.ctaPrimary {
+  @apply inline-flex items-center gap-2 rounded-full px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.ctaPrimary:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.ctaSecondary {
+  @apply inline-flex items-center gap-2 rounded-full border px-6 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.ctaSecondary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.pillRow {
+  @apply flex flex-wrap gap-2;
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full border px-4 py-1.5 text-[11px] uppercase tracking-[0.3em];
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.viewerColumn {
+  @apply flex flex-col gap-6;
+}
+
+.statsRow {
+  @apply grid grid-cols-3 gap-4 rounded-[1.5rem] border p-6;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.stat {
+  @apply flex flex-col items-center gap-1 text-center;
+}
+
+.statLabel {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.statValue {
+  @apply text-3xl tracking-[0.04em] md:text-4xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}

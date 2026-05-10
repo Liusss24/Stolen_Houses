@@ -1,0 +1,75 @@
+@reference "../../../app/globals.css";
+
+.page {
+  @apply mx-auto py-12 md:py-16;
+  width: min(1200px, calc(100% - 2rem));
+}
+
+.hero {
+  @apply mb-10 grid gap-3;
+}
+
+.dividerRow {
+  @apply flex items-center gap-3;
+}
+
+.divider {
+  @apply h-px flex-1;
+  background-color: var(--color-rule);
+}
+
+.eyebrow {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.titleItalic {
+  @apply mt-1 block text-3xl md:text-4xl;
+  color: var(--color-accent-deep);
+  font-family: var(--font-italic);
+  font-style: italic;
+}
+
+.description {
+  @apply max-w-2xl text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+  font-family: var(--font-body);
+}
+
+.feedback {
+  @apply mb-6 rounded-xl border px-4 py-3 text-sm;
+  border-color: color-mix(in srgb, var(--color-accent-deep) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-body);
+}
+
+.content {
+  @apply grid items-start gap-8;
+}
+
+.sidebar {
+  @apply min-w-0;
+}
+
+.results {
+  @apply min-w-0;
+}
+
+@media (min-width: 992px) {
+  .content {
+    grid-template-columns: 320px minmax(0, 1fr);
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 1rem;
+  }
+}
