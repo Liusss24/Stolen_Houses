@@ -35,7 +35,7 @@
 }
 
 .description {
-  @apply max-w-3xl text-base leading-relaxed;
+  @apply max-w-3xl text-4xl leading-relaxed;
   color: color-mix(in srgb, var(--color-ink) 80%, transparent);
   font-family: var(--font-body);
 }

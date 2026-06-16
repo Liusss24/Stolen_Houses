@@ -21,7 +21,7 @@ export const PROPERTY_SEARCH_TEXTS = {
       minBathrooms: "Baños mínimos",
       minArea: "Área mínima",
       featuredOnly: "Solo propiedades destacadas",
-      panoramaOnly: "Solo propiedades con vista 360",
+      model3dOnly: "Solo propiedades con modelo 3D",
     },
     placeholders: {
       query: "Ej. terraza, jardín, moderna, piscina",
@@ -53,7 +53,7 @@ export const PROPERTY_SEARCH_TEXTS = {
   },
   card: {
     featured: "Destacada",
-    panorama: "Vista 360",
+    model3d: "Vista 3D",
     match: (percentage: string) => `${percentage}% de semejanza`,
     labels: {
       price: "Precio",

@@ -138,16 +138,16 @@ export function PropertyCrudForm({
         </div>
 
         <div className={styles.fieldGroup}>
-          <label className={styles.label} htmlFor="panorama">
-            {texts.form.labels.panorama}
+          <label className={styles.label} htmlFor="model3d">
+            {texts.form.labels.model3d}
           </label>
           <input
-            id="panorama"
-            name="panorama"
-            value={form.panorama}
+            id="model3d"
+            name="model3d"
+            value={form.model3d}
             onChange={onChange}
             className={styles.input}
-            placeholder={texts.form.placeholders.panorama}
+            placeholder={texts.form.placeholders.model3d}
           />
         </div>
 

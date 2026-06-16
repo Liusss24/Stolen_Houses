@@ -24,6 +24,8 @@ export const LANDING_TEXTS = {
     },
     loginLabel: "INICIAR SESIÓN",
     loginHref: "/login",
+    logoutLabel: "CERRAR SESIÓN",
+    logoutHref: "/api/auth/logout",
   },
   hero: {
     kicker: "Bienes raíces · Edición MMXXVI",
@@ -73,7 +75,7 @@ export const LANDING_TEXTS = {
       "Una colección viva, desde estudios urbanos hasta haciendas privadas.",
     cardLabels: {
       featured: "FEATURED · 3D",
-      panorama: "3D",
+      model3d: "3D",
       indexPrefix: "№",
       bedrooms: "REC",
       bathrooms: "BA",

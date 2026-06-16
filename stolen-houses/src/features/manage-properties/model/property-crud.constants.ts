@@ -8,7 +8,7 @@ export const PROPERTY_CRUD_DEFAULT_FORM: PropertyFormState = {
   bathrooms: "",
   area: "",
   image: "",
-  panorama: "",
+  model3d: "",
   description: "",
   featured: false,
 };

@@ -5,6 +5,7 @@ import {
   AUTH_ADMIN_PREFIX,
   AUTH_COOKIE_NAME,
   AUTH_LOGIN_PATH,
+  AUTH_PUBLIC_PATHS,
 } from "@/features/auth/model/auth.constants";
 
 function redirectToLogin(request: NextRequest) {
@@ -18,7 +19,7 @@ function redirectToLogin(request: NextRequest) {
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  if (pathname === AUTH_LOGIN_PATH) {
+  if ((AUTH_PUBLIC_PATHS as readonly string[]).includes(pathname)) {
     return NextResponse.next();
   }
 
@@ -37,6 +38,6 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|images|models|fonts).*)",
   ],
 };

@@ -3,7 +3,12 @@
     "allow": [
       "PowerShell(if \\(-Not \\(Test-Path \"C:\\\\Users\\\\Aaron\\\\.claude\\\\projects\\\\C--Users-Aaron-Documents-GitHub-Stolen-Houses\\\\memory\\\\\"\\)\\) { New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\Aaron\\\\.claude\\\\projects\\\\C--Users-Aaron-Documents-GitHub-Stolen-Houses\\\\memory\\\\\" | Out-Null }; ls \"C:\\\\Users\\\\Aaron\\\\.claude\\\\projects\\\\C--Users-Aaron-Documents-GitHub-Stolen-Houses\\\\memory\\\\\" | Select-Object Name)",
       "PowerShell(cd \"C:\\\\Users\\\\Aaron\\\\Documents\\\\GitHub\\\\Stolen_Houses\\\\stolen-houses\"; npx tsc --noEmit; echo \"EXIT=$LASTEXITCODE\")",
-      "Bash(python -c \"import json, sys; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\)\")"
+      "Bash(python -c \"import json, sys; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\)\")",
+      "Bash(mkdir -p \"C:/Users/Aaron/Documents/GitHub/Stolen_Houses/stolen-houses/public/models\")",
+      "Bash(curl -L -o sample-house.glb \"https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/AntiqueCamera/glTF-Binary/AntiqueCamera.glb\" -w \"%{http_code} %{size_download}\\\\n\")",
+      "Bash(rm -f sample-house.glb)",
+      "Bash(curl -L -o sample-house.glb \"https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Duck/glTF-Binary/Duck.glb\" -w \"STATUS=%{http_code} SIZE=%{size_download}\\\\n\")",
+      "Bash(npx tsc *)"
     ]
   }
 }

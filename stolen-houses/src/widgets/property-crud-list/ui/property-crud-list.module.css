@@ -70,7 +70,7 @@
 }
 
 .cardDescription {
-  @apply mt-2 text-sm leading-relaxed;
+  @apply mt-2 text-3xl leading-relaxed;
   color: color-mix(in srgb, var(--color-ink) 75%, transparent);
   font-family: var(--font-body);
   display: -webkit-box;

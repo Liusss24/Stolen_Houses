@@ -1,0 +1,98 @@
+@reference "../../../app/globals.css";
+
+.summary {
+  @apply flex flex-col gap-10;
+}
+
+.head {
+  @apply flex flex-col gap-3;
+}
+
+.eyebrow {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-5xl tracking-[0.04em] md:text-6xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.location {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.specsRow {
+  @apply grid grid-cols-1 gap-6 border-t pt-8 sm:grid-cols-3;
+  border-color: var(--color-rule);
+}
+
+.stat {
+  @apply flex flex-col gap-1;
+}
+
+.statLabel {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.statValue {
+  @apply text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.descriptionBlock {
+  @apply flex flex-col gap-3 border-t pt-8;
+  border-color: var(--color-rule);
+}
+
+.descriptionTitle {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.descriptionBody {
+  @apply max-w-3xl text-4xl leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+  font-family: var(--font-body);
+}
+
+.metaBlock {
+  @apply flex flex-col gap-3 border-t pt-8;
+  border-color: var(--color-rule);
+}
+
+.metaTitle {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.metaList {
+  @apply grid grid-cols-1 gap-3 sm:grid-cols-3;
+}
+
+.metaItem {
+  @apply flex flex-col gap-1;
+}
+
+.metaLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.metaValue {
+  @apply text-sm;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}

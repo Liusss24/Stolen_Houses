@@ -1,0 +1,51 @@
+@reference "../../../app/globals.css";
+
+.viewer {
+  @apply relative overflow-hidden rounded-md border;
+  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  background-color: var(--color-ink-deep);
+  aspect-ratio: 4 / 3;
+  margin: 0;
+}
+
+.modelHost {
+  @apply absolute inset-0 h-full w-full;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      color-mix(in srgb, var(--color-ink-mid) 60%, transparent),
+      transparent 70%
+    ),
+    var(--color-ink-deep);
+}
+
+.posterImage {
+  @apply absolute inset-0 h-full w-full object-cover;
+}
+
+.posterScrim {
+  @apply absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-ink-deep) 55%, transparent),
+    color-mix(in srgb, var(--color-ink-deep) 15%, transparent) 45%,
+    color-mix(in srgb, var(--color-ink-deep) 75%, transparent)
+  );
+}
+
+.loadingText {
+  @apply absolute inset-x-0 bottom-1/2 translate-y-1/2 text-center text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.errorPanel {
+  @apply absolute inset-0 grid place-items-center p-6;
+  background-color: color-mix(in srgb, var(--color-ink-deep) 80%, transparent);
+}
+
+.errorText {
+  @apply max-w-xs text-center text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}

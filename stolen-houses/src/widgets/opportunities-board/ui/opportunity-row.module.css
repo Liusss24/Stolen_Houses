@@ -1,0 +1,178 @@
+@reference "../../../app/globals.css";
+
+.row {
+  @apply grid gap-4 rounded-md border p-6 transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.row[data-pending="true"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.headerRow {
+  @apply flex flex-col gap-3 md:flex-row md:items-start md:justify-between;
+}
+
+.propertyBlock {
+  @apply flex flex-col gap-1;
+}
+
+.propertyEyebrow {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.propertyTitle {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.propertyLocation {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.statusBlock {
+  @apply flex flex-col gap-2 md:items-end;
+}
+
+.statusLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.statusControl {
+  @apply rounded-md border px-3 py-2 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+  cursor: pointer;
+}
+
+.statusControl:focus-visible {
+  outline: 2px solid var(--color-accent-deep);
+  outline-offset: 2px;
+}
+
+.statusNew {
+  border-color: var(--color-rule);
+  color: var(--color-ink);
+}
+
+.statusContacted {
+  border-color: var(--color-accent-deep);
+  color: var(--color-accent-deep);
+}
+
+.statusVisitScheduled {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.statusNegotiating {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+}
+
+.statusClosedWon {
+  border-color: var(--color-ink-deep);
+  background-color: var(--color-ink-deep);
+  color: var(--color-accent);
+}
+
+.statusClosedLost {
+  border-color: color-mix(in srgb, var(--color-muted) 60%, transparent);
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+
+.detailsGrid {
+  @apply grid gap-4 border-t pt-5 md:grid-cols-4;
+  border-color: var(--color-rule);
+}
+
+.detail {
+  @apply flex flex-col gap-1;
+}
+
+.detailLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.detailValue {
+  @apply text-base;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.detailMuted {
+  @apply text-sm;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+  font-family: var(--font-body);
+}
+
+.detailValueAccent {
+  @apply text-base;
+  color: var(--color-accent-deep);
+  font-family: var(--font-display);
+}
+
+.notesBlock {
+  @apply flex flex-col gap-2 border-t pt-5;
+  border-color: var(--color-rule);
+}
+
+.notesLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.notesBody {
+  @apply text-3xl leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+  font-family: var(--font-body);
+}
+
+.notesEmpty {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.footerRow {
+  @apply flex flex-wrap items-center justify-between gap-3 border-t pt-5 text-[10px] uppercase tracking-[0.32em];
+  border-color: var(--color-rule);
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.reference {
+  @apply text-[10px];
+  letter-spacing: 0.18em;
+  text-transform: none;
+  color: color-mix(in srgb, var(--color-muted) 80%, transparent);
+}
+
+.deleteButton {
+  @apply inline-flex items-center gap-2 rounded-md border px-4 py-2 text-[10px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.deleteButton:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}

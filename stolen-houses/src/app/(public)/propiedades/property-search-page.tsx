@@ -1,14 +1,22 @@
 "use client";
 
-import { PROPERTY_SEARCH_TEXTS } from "@/i18n/es/property-search";
+import Link from "next/link";
+
+import type { Locale } from "@/shared/constants/locale";
+import { PROPERTY_SEARCH_TEXTS as ES_TEXTS } from "@/i18n/es/property-search";
+import { PROPERTY_SEARCH_TEXTS as EN_TEXTS } from "@/i18n/en/property-search";
 import { usePropertySearch } from "@/features/property-search/hooks/use-property-search";
 import { FilterPanel } from "@/widgets/filter-panel/ui/filter-panel";
 import { PropertyCatalog } from "@/widgets/property-catalog/ui/property-catalog";
 
 import styles from "./property-search-page.module.css";
 
-export function PropertySearchPage() {
-  const texts = PROPERTY_SEARCH_TEXTS;
+type PropertySearchPageProps = {
+  locale: Locale;
+};
+
+export function PropertySearchPage({ locale }: PropertySearchPageProps) {
+  const texts = (locale === "en" ? EN_TEXTS : ES_TEXTS) as typeof ES_TEXTS;
   const {
     filters,
     results,
@@ -23,6 +31,7 @@ export function PropertySearchPage() {
 
   return (
     <main className={styles.page}>
+      <Link href="/" className={styles.backLink}>← Inicio</Link>
       <section className={styles.hero}>
         <div className={styles.dividerRow}>
           <span className={styles.divider} aria-hidden="true" />

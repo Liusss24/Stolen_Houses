@@ -18,7 +18,7 @@ import type {
   PropertySearchFilters,
 } from "@/features/property-search/model/property-search.types";
 
-type BooleanFilterKey = "featuredOnly" | "panoramaOnly";
+type BooleanFilterKey = "featuredOnly" | "model3dOnly";
 type StringFilterKey = Exclude<keyof PropertySearchFilters, BooleanFilterKey>;
 
 type UsePropertySearchReturn = {

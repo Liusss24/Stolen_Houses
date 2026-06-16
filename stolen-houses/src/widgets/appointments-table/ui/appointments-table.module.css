@@ -1,0 +1,89 @@
+@reference "../../../app/globals.css";
+
+.panel {
+  @apply flex flex-col gap-8;
+}
+
+.toolbar {
+  @apply flex flex-col gap-4 md:flex-row md:items-end md:justify-between;
+}
+
+.titleBlock {
+  @apply flex flex-col gap-1;
+}
+
+.title {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.summary {
+  @apply text-[11px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.filters {
+  @apply flex flex-wrap gap-2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filterChip {
+  @apply inline-flex items-center gap-2 rounded-md border px-3 py-2 text-[10px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+  cursor: pointer;
+}
+
+.filterChip:hover {
+  border-color: var(--color-accent-deep);
+}
+
+.filterActive {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.filterCount {
+  @apply text-[10px];
+  letter-spacing: 0.1em;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.feedback {
+  @apply rounded-md border px-4 py-3 text-sm;
+  font-family: var(--font-body);
+}
+
+.feedbackSuccess {
+  border-color: color-mix(in srgb, var(--color-accent-deep) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  color: var(--color-ink-deep);
+}
+
+.feedbackError {
+  border-color: color-mix(in srgb, var(--color-ink) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-soft) 18%, transparent);
+  color: var(--color-ink-deep);
+}
+
+.list {
+  @apply grid gap-4;
+}
+
+.status {
+  @apply rounded-md border border-dashed px-4 py-12 text-center text-sm;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}

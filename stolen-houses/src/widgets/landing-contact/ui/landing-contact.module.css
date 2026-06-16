@@ -21,7 +21,7 @@
 }
 
 .description {
-  @apply mt-3 max-w-md text-base leading-relaxed;
+  @apply mt-3 max-w-md text-4xl leading-relaxed;
   color: color-mix(in srgb, var(--color-canvas) 80%, transparent);
   font-family: var(--font-body);
 }

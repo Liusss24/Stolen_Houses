@@ -32,7 +32,7 @@ export function LandingPropertyCard({
           <span className={styles.featuredBadge}>{labels.featured}</span>
         ) : (
           <span className={styles.mediaLabel}>
-            {labels.indexPrefix} {property.index} · {labels.panorama}
+            {labels.indexPrefix} {property.index} · {labels.model3d}
           </span>
         )}
 

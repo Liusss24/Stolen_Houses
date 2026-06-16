@@ -1,0 +1,52 @@
+@reference "../../../app/globals.css";
+
+.page {
+  @apply min-h-screen py-12 md:py-16;
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-6xl flex-col gap-10 px-6;
+}
+
+.backLink {
+  @apply inline-flex items-center gap-1 text-xs uppercase tracking-[0.32em] no-underline transition;
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.backLink:hover {
+  color: var(--color-ink);
+}
+
+.header {
+  @apply flex flex-col gap-3;
+}
+
+.dividerRow {
+  @apply flex items-center gap-3;
+}
+
+.divider {
+  @apply h-px flex-1;
+  background-color: var(--color-rule);
+}
+
+.eyebrow {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  line-height: 1.05;
+}
+
+.description {
+  @apply max-w-3xl text-4xl leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+  font-family: var(--font-body);
+}

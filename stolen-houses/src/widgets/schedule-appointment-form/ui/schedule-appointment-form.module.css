@@ -1,0 +1,174 @@
+@reference "../../../app/globals.css";
+
+.wrapper {
+  @apply flex flex-col gap-8;
+}
+
+.formPanel {
+  @apply flex flex-col gap-6 rounded-md border p-8;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.sectionTitle {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.fieldGrid {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.fieldFull {
+  @apply md:col-span-2;
+}
+
+.field {
+  @apply flex flex-col gap-1.5;
+}
+
+.label {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.input,
+.textarea {
+  @apply w-full rounded-md border px-4 py-3 text-sm outline-none transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.feedback {
+  @apply rounded-md border px-4 py-3 text-sm;
+  border-color: color-mix(in srgb, var(--color-accent-deep) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-body);
+}
+
+.actions {
+  @apply flex flex-wrap items-center justify-between gap-4;
+}
+
+.submitButton {
+  @apply inline-flex items-center gap-2 rounded-md px-7 py-4 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.submitButton:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.submitButton:disabled {
+  @apply cursor-not-allowed opacity-60;
+}
+
+.backLink {
+  @apply inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.32em] transition;
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.backLink:hover {
+  color: var(--color-accent-deep);
+}
+
+.successPanel {
+  @apply flex flex-col gap-6 rounded-md border p-10;
+  border-color: color-mix(in srgb, var(--color-accent-deep) 50%, transparent);
+  background-color: color-mix(in srgb, var(--color-accent) 12%, var(--color-paper));
+}
+
+.successEyebrow {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.successTitle {
+  @apply text-3xl tracking-[0.04em] md:text-4xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.successDescription {
+  @apply max-w-2xl text-4xl leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+  font-family: var(--font-body);
+}
+
+.summaryTitle {
+  @apply mt-2 text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.summaryList {
+  @apply grid grid-cols-1 gap-3 sm:grid-cols-3;
+}
+
+.summaryItem {
+  @apply flex flex-col gap-1;
+}
+
+.summaryLabel {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.summaryValue {
+  @apply text-sm;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.successActions {
+  @apply mt-4 flex flex-wrap gap-3;
+}
+
+.successPrimary {
+  @apply inline-flex items-center gap-2 rounded-md px-6 py-4 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.successPrimary:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.successSecondary {
+  @apply inline-flex items-center gap-2 rounded-md border px-6 py-4 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.successSecondary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}

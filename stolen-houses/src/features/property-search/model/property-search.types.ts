@@ -9,7 +9,7 @@ export type PropertySearchFilters = {
   minBathrooms: string;
   minArea: string;
   featuredOnly: boolean;
-  panoramaOnly: boolean;
+  model3dOnly: boolean;
 };
 
 export type RankedProperty = {

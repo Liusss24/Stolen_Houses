@@ -28,7 +28,7 @@
 }
 
 .cardDescription {
-  @apply text-base leading-relaxed;
+  @apply text-4xl leading-relaxed;
   color: color-mix(in srgb, var(--color-ink) 75%, transparent);
   font-family: var(--font-body);
 }

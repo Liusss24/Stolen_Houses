@@ -7,6 +7,7 @@ import {
   cormorantGaramond,
   limelightDisplay,
 } from "@/shared/config/editorial-fonts";
+import { getLocale } from "@/shared/lib/get-locale";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,13 @@ export const metadata: Metadata = {
     "Plataforma para gestionar propiedades, citas y oportunidades de venta.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
   const fontVariables = [
     geistSans.variable,
     geistMono.variable,
@@ -41,7 +44,7 @@ export default function RootLayout({
   ].join(" ");
 
   return (
-    <html lang="es" className={`${fontVariables} h-full antialiased`}>
+    <html lang={locale} className={`${fontVariables} h-full antialiased`}>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "07e80cc9-1ed0-4e85-b0f9-c444b5782e94",
+    "status": "confirmed",
+    "createdAt": "2026-06-15T08:10:17.640Z",
+    "updatedAt": "2026-06-15T08:10:56.975Z",
+    "propertyId": "1",
+    "propertyTitle": "Casa Moderna en Escazú",
+    "propertyLocation": "Escazú, San José",
+    "clientName": "Aarón Líos",
+    "clientEmail": "hola@gmail.com",
+    "clientPhone": "818818181811",
+    "scheduledFor": "2026-09-25T15:00:00.000Z",
+    "notes": "hola"
+  }
+]

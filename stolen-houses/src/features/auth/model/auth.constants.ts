@@ -10,3 +10,5 @@ export const AUTH_COOKIE_NAME = "sh_role";
 export const AUTH_LOGIN_PATH = "/login";
 export const AUTH_ADMIN_PREFIX = "/dashboard";
 export const AUTH_CLIENT_HOME_PATH = "/";
+
+export const AUTH_PUBLIC_PATHS = ["/", AUTH_LOGIN_PATH] as const;

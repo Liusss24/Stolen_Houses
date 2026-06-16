@@ -5,6 +5,16 @@
   width: min(1200px, calc(100% - 2rem));
 }
 
+.backLink {
+  @apply inline-flex items-center gap-1 mb-8 text-xs uppercase tracking-[0.32em] no-underline transition;
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.backLink:hover {
+  color: var(--color-ink);
+}
+
 .hero {
   @apply mb-10 grid gap-3;
 }
@@ -38,7 +48,7 @@
 }
 
 .description {
-  @apply max-w-2xl text-base leading-relaxed;
+  @apply max-w-2xl text-4xl leading-relaxed;
   color: color-mix(in srgb, var(--color-ink) 80%, transparent);
   font-family: var(--font-body);
 }

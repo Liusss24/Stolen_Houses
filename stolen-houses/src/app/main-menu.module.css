@@ -1,0 +1,96 @@
+@reference "./globals.css";
+
+.page {
+  @apply min-h-screen py-10;
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-6;
+}
+
+.header {
+  @apply mb-8;
+}
+
+.badge {
+  @apply inline-flex rounded-full px-4 py-1 text-sm font-medium;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.title {
+  @apply mt-4 text-3xl font-bold;
+  color: var(--color-ink);
+}
+
+.description {
+  @apply mt-2 max-w-3xl;
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+}
+
+.grid {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.card {
+  @apply block rounded-2xl border p-6 shadow-sm transition;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.card:hover {
+  border-color: var(--color-accent-deep);
+  box-shadow: 0 12px 30px -20px color-mix(in srgb, var(--color-ink-deep) 50%, transparent);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-accent-deep);
+  outline-offset: 2px;
+}
+
+.cardTitle {
+  @apply text-lg font-semibold;
+  color: var(--color-ink);
+}
+
+.cardDescription {
+  @apply mt-2 text-sm;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+}
+
+.cardCta {
+  @apply mt-4 inline-flex text-sm font-medium;
+  color: var(--color-accent-deep);
+}
+
+.panel {
+  @apply rounded-2xl border p-6 shadow-sm;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+}
+
+.panelText {
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+}
+
+.panelActions {
+  @apply mt-6;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.primaryButton:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.primaryButton:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

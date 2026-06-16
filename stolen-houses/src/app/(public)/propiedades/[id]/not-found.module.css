@@ -1,0 +1,48 @@
+@reference "../../../../app/globals.css";
+
+.page {
+  @apply min-h-screen;
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-3xl flex-col items-start gap-6 px-6 py-24 md:py-32;
+}
+
+.dividerRow {
+  @apply flex w-full items-center gap-3;
+}
+
+.divider {
+  @apply h-px flex-1;
+  background-color: var(--color-rule);
+}
+
+.eyebrow {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-4xl tracking-[0.04em] md:text-5xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.description {
+  @apply max-w-2xl text-base leading-relaxed;
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+  font-family: var(--font-body);
+}
+
+.action {
+  @apply mt-4 inline-flex items-center gap-2 rounded-md px-6 py-4 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.action:hover {
+  background-color: var(--color-accent-deep);
+}

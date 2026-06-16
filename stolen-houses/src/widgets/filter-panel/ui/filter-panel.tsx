@@ -164,16 +164,16 @@ export function FilterPanel({
           {texts.filters.fields.featuredOnly}
         </label>
 
-        <label className={styles.checkboxRow} htmlFor="panoramaOnly">
+        <label className={styles.checkboxRow} htmlFor="model3dOnly">
           <input
-            id="panoramaOnly"
-            name="panoramaOnly"
+            id="model3dOnly"
+            name="model3dOnly"
             type="checkbox"
-            checked={filters.panoramaOnly}
+            checked={filters.model3dOnly}
             onChange={onChange}
             className={styles.checkbox}
           />
-          {texts.filters.fields.panoramaOnly}
+          {texts.filters.fields.model3dOnly}
         </label>
 
         <div className={styles.actions}>

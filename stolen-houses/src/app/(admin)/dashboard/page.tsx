@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { MAIN_MENU_TEXTS } from "@/i18n/es/main-menu";
+import { AdminTopBar } from "@/shared/ui/admin-top-bar/admin-top-bar";
 import { MenuGrid, MenuPageShell } from "@/widgets/menu-page";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function AdminDashboardMenuPage() {
   return (
     <MenuPageShell header={menu.header}>
       <MenuGrid items={menu.items} ariaLabel={menu.header.title} />
+      <AdminTopBar />
     </MenuPageShell>
   );
 }

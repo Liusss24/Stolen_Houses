@@ -1,0 +1,19 @@
+[
+  {
+    "id": "c31f94ae-f913-4a53-a985-cabddf6a46c8",
+    "propertyId": "1",
+    "propertyTitle": "Casa Moderna en Escazú",
+    "propertyLocation": "Escazú, San José",
+    "propertyPrice": 185000,
+    "clientName": "Aarón Líos",
+    "clientEmail": "hola@gmail.com",
+    "clientPhone": "818818181811",
+    "status": "visit_scheduled",
+    "source": "appointment",
+    "appointmentId": "07e80cc9-1ed0-4e85-b0f9-c444b5782e94",
+    "estimatedValue": 185000,
+    "notes": "hola",
+    "createdAt": "2026-06-15T08:10:44.542Z",
+    "updatedAt": "2026-06-15T08:10:44.542Z"
+  }
+]

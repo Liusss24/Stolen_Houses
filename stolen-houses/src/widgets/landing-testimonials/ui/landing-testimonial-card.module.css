@@ -25,7 +25,7 @@
 }
 
 .quote {
-  @apply text-base leading-relaxed;
+  @apply text-4xl leading-relaxed;
   color: color-mix(in srgb, var(--color-ink) 85%, transparent);
   font-family: var(--font-italic);
   font-style: italic;

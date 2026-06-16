@@ -13,7 +13,7 @@ export function mapPropertyToForm(property: Property): PropertyFormState {
     bathrooms: String(property.bathrooms),
     area: String(property.area),
     image: property.image,
-    panorama: property.panorama ?? "",
+    model3d: property.model3d ?? "",
     description: property.description,
     featured: property.featured,
   };
@@ -30,7 +30,7 @@ export function mapFormToPropertyPayload(
     bathrooms: Number(form.bathrooms),
     area: Number(form.area),
     image: form.image.trim(),
-    panorama: form.panorama.trim() || undefined,
+    model3d: form.model3d.trim() || undefined,
     description: form.description.trim(),
     featured: form.featured,
   };

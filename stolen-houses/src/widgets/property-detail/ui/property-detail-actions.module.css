@@ -1,0 +1,93 @@
+@reference "../../../app/globals.css";
+
+.panel {
+  @apply flex flex-col gap-6 rounded-md border p-8;
+  border-color: var(--color-rule);
+  background-color: var(--color-paper);
+  position: sticky;
+  top: 1.5rem;
+}
+
+.eyebrow {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.title {
+  @apply text-2xl tracking-[0.04em];
+  color: var(--color-ink);
+  font-family: var(--font-display);
+}
+
+.priceBlock {
+  @apply flex flex-col gap-1 border-t pt-6;
+  border-color: var(--color-rule);
+}
+
+.priceLabel {
+  @apply text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.price {
+  @apply text-3xl tracking-[0.04em] md:text-4xl;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  line-height: 1.05;
+}
+
+.buttonStack {
+  @apply flex flex-col gap-3;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-4 text-[11px] uppercase tracking-[0.32em] transition;
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.primaryButton:hover {
+  background-color: var(--color-accent-deep);
+}
+
+.primaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.secondaryButton {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border px-6 py-4 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  background-color: transparent;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.secondaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.note {
+  @apply text-[10px] uppercase tracking-[0.32em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.backLink {
+  @apply inline-flex items-center gap-2 self-start text-[11px] uppercase tracking-[0.32em] transition;
+  color: var(--color-ink);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.backLink:hover {
+  color: var(--color-accent-deep);
+}

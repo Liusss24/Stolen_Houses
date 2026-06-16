@@ -1,18 +1,4 @@
 export const MAIN_MENU_TEXTS = {
-  switcher: {
-    brand: {
-      label: "STOLEN HOUSES",
-      href: "/",
-    },
-    client: {
-      label: "Cliente",
-      href: "/inicio",
-    },
-    admin: {
-      label: "Admin",
-      href: "/dashboard",
-    },
-  },
   public: {
     metadataTitle: "Inicio",
     metadataDescription:
@@ -60,6 +46,13 @@ export const MAIN_MENU_TEXTS = {
         title: "Citas",
         description: "Administra las citas de clientes con el equipo de ventas.",
         cta: "Ver citas",
+      },
+      {
+        href: "/dashboard/oportunidades",
+        title: "Oportunidades",
+        description:
+          "Registra y da seguimiento al pipeline de ventas hasta cerrar o desechar cada caso.",
+        cta: "Ver pipeline",
       },
     ],
   },

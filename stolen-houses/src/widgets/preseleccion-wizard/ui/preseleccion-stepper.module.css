@@ -1,0 +1,57 @@
+@reference "../../../app/globals.css";
+
+.stepper {
+  @apply flex w-full flex-col gap-3;
+}
+
+.progress {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-accent-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.track {
+  @apply grid items-start gap-3;
+  grid-template-columns: repeat(var(--steps), minmax(0, 1fr));
+}
+
+.step {
+  @apply flex flex-col gap-2 border-t pt-3 transition;
+  border-color: var(--color-rule);
+}
+
+.stepActive {
+  border-color: var(--color-accent-deep);
+}
+
+.stepComplete {
+  border-color: var(--color-ink);
+}
+
+.stepIndex {
+  @apply text-[11px] uppercase tracking-[0.4em];
+  color: color-mix(in srgb, var(--color-ink) 40%, transparent);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.stepActive .stepIndex {
+  color: var(--color-accent-deep);
+}
+
+.stepComplete .stepIndex {
+  color: var(--color-ink);
+}
+
+.stepLabel {
+  @apply text-[11px] uppercase tracking-[0.3em];
+  color: color-mix(in srgb, var(--color-ink) 50%, transparent);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.stepActive .stepLabel {
+  color: var(--color-ink);
+}
+
+.stepComplete .stepLabel {
+  color: var(--color-ink);
+}

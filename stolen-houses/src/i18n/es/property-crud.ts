@@ -16,7 +16,7 @@ export const PROPERTY_CRUD_TEXTS = {
       bathrooms: "Baños",
       area: "Área m²",
       image: "Imagen",
-      panorama: "Imagen 360",
+      model3d: "Modelo 3D (URL .glb)",
       description: "Descripción",
     },
     placeholders: {
@@ -24,7 +24,7 @@ export const PROPERTY_CRUD_TEXTS = {
       price: "185000",
       location: "Escazú, San José",
       image: "/images/properties/casa-1.jpg",
-      panorama: "/images/properties/casa-1-360.jpg",
+      model3d: "/models/casa-1.glb",
       description: "Describe la propiedad...",
     },
     featured: "Marcar como destacada",

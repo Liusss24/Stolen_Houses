@@ -44,8 +44,8 @@ export function parseCreatePropertyInput(
     bathrooms,
     area,
     image: body.image.trim(),
-    panorama: isNonEmptyString(body.panorama)
-      ? body.panorama.trim()
+    model3d: isNonEmptyString(body.model3d)
+      ? body.model3d.trim()
       : undefined,
     description: body.description.trim(),
     featured: Boolean(body.featured),
@@ -69,8 +69,8 @@ export function parseUpdatePropertyInput(
     input.image = body.image.trim();
   }
 
-  if (isNonEmptyString(body.panorama)) {
-    input.panorama = body.panorama.trim();
+  if (isNonEmptyString(body.model3d)) {
+    input.model3d = body.model3d.trim();
   }
 
   if (isNonEmptyString(body.description)) {

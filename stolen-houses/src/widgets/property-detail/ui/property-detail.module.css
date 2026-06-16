@@ -1,0 +1,45 @@
+@reference "../../../app/globals.css";
+
+.page {
+  @apply min-h-screen;
+  background-color: var(--color-canvas);
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-12 md:gap-14 md:py-16;
+}
+
+.breadcrumb {
+  @apply flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.4em];
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.breadcrumbLink {
+  color: var(--color-ink);
+  transition: color 150ms ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-accent-deep);
+}
+
+.breadcrumbSeparator {
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-accent-deep);
+}
+
+.contentGrid {
+  @apply grid gap-10;
+}
+
+@media (min-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 4rem;
+  }
+}

@@ -12,8 +12,8 @@ import {
 } from "./filter-values";
 import type { PropertySearchFilters } from "./property-search.types";
 
-function hasPanorama(property: Property): boolean {
-  return Boolean(property.panorama?.trim());
+function hasModel3d(property: Property): boolean {
+  return Boolean(property.model3d?.trim());
 }
 
 export function passesStrictFilters(
@@ -24,7 +24,7 @@ export function passesStrictFilters(
     return false;
   }
 
-  if (filters.panoramaOnly && !hasPanorama(property)) {
+  if (filters.model3dOnly && !hasModel3d(property)) {
     return false;
   }
 

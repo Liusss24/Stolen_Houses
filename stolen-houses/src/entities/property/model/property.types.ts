@@ -7,7 +7,7 @@ export type Property = {
 	bathrooms: number;
 	area: number;
 	image: string;
-	panorama?: string;
+	model3d?: string;
 	description: string;
 	featured: boolean;
 	createdAt: string;

@@ -1,0 +1,5 @@
+@reference "../../../app/globals.css";
+
+.wizard {
+  @apply flex flex-col gap-10;
+}

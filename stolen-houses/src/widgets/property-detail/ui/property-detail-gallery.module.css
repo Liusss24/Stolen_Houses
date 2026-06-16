@@ -1,0 +1,70 @@
+@reference "../../../app/globals.css";
+
+.galleryWrapper {
+  @apply flex flex-col gap-4;
+}
+
+.toggleButton {
+  @apply inline-flex items-center gap-2 self-start rounded-md border px-5 py-3 text-[11px] uppercase tracking-[0.32em] transition;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  background-color: transparent;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.toggleButton:hover {
+  background-color: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.gallery {
+  @apply relative overflow-hidden rounded-md border;
+  border-color: var(--color-rule);
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-ink-deep);
+}
+
+.image {
+  @apply absolute inset-0 h-full w-full object-cover;
+}
+
+.fallback {
+  @apply absolute inset-0 grid place-items-center text-[11px] uppercase tracking-[0.4em];
+  color: color-mix(in srgb, var(--color-canvas) 80%, transparent);
+  background-color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.scrim {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    transparent 55%,
+    color-mix(in srgb, var(--color-ink-deep) 80%, transparent) 100%
+  );
+}
+
+.badgeRow {
+  @apply absolute left-6 right-6 top-6 flex flex-wrap items-start justify-between gap-3;
+}
+
+.featuredBadge {
+  @apply inline-flex items-center rounded-md px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.model3dBadge {
+  @apply inline-flex items-center gap-2 rounded-md border px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  border-color: color-mix(in srgb, var(--color-accent) 60%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink-deep) 70%, transparent);
+  color: var(--color-accent);
+  font-family: var(--font-geist-mono), monospace;
+  backdrop-filter: blur(4px);
+}
+
+.model3dBullet {
+  color: var(--color-accent);
+  line-height: 1;
+}

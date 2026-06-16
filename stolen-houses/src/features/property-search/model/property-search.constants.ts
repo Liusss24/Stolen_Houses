@@ -9,7 +9,7 @@ export const PROPERTY_SEARCH_DEFAULT_FILTERS: PropertySearchFilters = {
   minBathrooms: "",
   minArea: "",
   featuredOnly: false,
-  panoramaOnly: false,
+  model3dOnly: false,
 };
 
 export const PROPERTY_SEARCH_SCORE_WEIGHTS = {
@@ -36,7 +36,7 @@ export const PROPERTY_SEARCH_NUMERIC_FILTER_KEYS = [
 
 export const PROPERTY_SEARCH_STRICT_FILTER_KEYS = [
   "featuredOnly",
-  "panoramaOnly",
+  "model3dOnly",
 ] as const;
 
 export type PropertySearchTextFilterKey =

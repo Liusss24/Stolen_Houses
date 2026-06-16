@@ -1,0 +1,64 @@
+@reference "../../../app/globals.css";
+
+.overlay {
+  @apply pointer-events-none absolute inset-0;
+}
+
+.cornerBracket {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-accent-deep);
+}
+
+.cornerTL {
+  top: 12px;
+  left: 12px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.cornerTR {
+  top: 12px;
+  right: 12px;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.cornerBL {
+  bottom: 12px;
+  left: 12px;
+  border-right: 0;
+  border-top: 0;
+}
+
+.cornerBR {
+  bottom: 12px;
+  right: 12px;
+  border-left: 0;
+  border-top: 0;
+}
+
+.label {
+  @apply absolute left-6 top-6 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.4em];
+  color: var(--color-canvas);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.bullet {
+  color: var(--color-accent);
+}
+
+.sampleBadge {
+  @apply absolute right-6 top-6 inline-flex items-center rounded-md px-3 py-1 text-[10px] uppercase tracking-[0.32em];
+  background-color: var(--color-accent);
+  color: var(--color-ink-deep);
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.hint {
+  @apply absolute inset-x-6 bottom-6 flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.4em];
+  color: color-mix(in srgb, var(--color-canvas) 85%, transparent);
+  font-family: var(--font-geist-mono), monospace;
+  text-align: center;
+}

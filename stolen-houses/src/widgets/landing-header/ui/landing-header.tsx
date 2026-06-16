@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import type { Locale } from "@/shared/constants/locale";
 import type { LandingTexts } from "@/i18n/es/landing";
 
 import styles from "./landing-header.module.css";
@@ -7,11 +8,16 @@ import styles from "./landing-header.module.css";
 export type LandingHeaderProps = {
   brand: LandingTexts["brand"];
   navigation: LandingTexts["navigation"];
+  activeLocale: Locale;
+  showLogin?: boolean;
 };
 
-export function LandingHeader({ brand, navigation }: LandingHeaderProps) {
-  const activeLocale = navigation.locales.activeLocale;
-
+export function LandingHeader({
+  brand,
+  navigation,
+  activeLocale,
+  showLogin = true,
+}: LandingHeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.bar}>
@@ -30,8 +36,8 @@ export function LandingHeader({ brand, navigation }: LandingHeaderProps) {
 
         <div className={styles.actions}>
           <div className={styles.localeGroup} role="group" aria-label="Idioma">
-            <button
-              type="button"
+            <a
+              href="/api/locale?lang=es&returnTo=/"
               className={`${styles.localeButton} ${
                 activeLocale === "es"
                   ? styles.localeActive
@@ -39,12 +45,12 @@ export function LandingHeader({ brand, navigation }: LandingHeaderProps) {
               }`}
             >
               {navigation.locales.es}
-            </button>
+            </a>
             <span className={styles.localeDivider} aria-hidden="true">
               |
             </span>
-            <button
-              type="button"
+            <a
+              href="/api/locale?lang=en&returnTo=/"
               className={`${styles.localeButton} ${
                 activeLocale === "en"
                   ? styles.localeActive
@@ -52,12 +58,20 @@ export function LandingHeader({ brand, navigation }: LandingHeaderProps) {
               }`}
             >
               {navigation.locales.en}
-            </button>
+            </a>
           </div>
 
-          <Link href={navigation.loginHref} className={styles.loginButton}>
-            {navigation.loginLabel}
-          </Link>
+          {showLogin ? (
+            <Link href={navigation.loginHref} className={styles.loginButton}>
+              {navigation.loginLabel}
+            </Link>
+          ) : (
+            <form action={navigation.logoutHref} method="POST">
+              <button type="submit" className={styles.loginButton}>
+                {navigation.logoutLabel}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </header>

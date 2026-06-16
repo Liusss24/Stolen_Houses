@@ -6,7 +6,7 @@ export type PropertyFormState = {
   bathrooms: string;
   area: string;
   image: string;
-  panorama: string;
+  model3d: string;
   description: string;
   featured: boolean;
 };

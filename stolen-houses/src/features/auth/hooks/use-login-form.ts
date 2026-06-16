@@ -2,7 +2,6 @@
 
 import { useCallback, useMemo, useState } from "react";
 import type { FormEvent } from "react";
-import { useRouter } from "next/navigation";
 
 import {
   AUTH_ADMIN_PREFIX,
@@ -44,8 +43,6 @@ type UseLoginFormReturn = {
  *          submission status flags consumed by the LoginForm widget.
  */
 export function useLoginForm(texts: LoginFormTexts): UseLoginFormReturn {
-  const router = useRouter();
-
   const [role, setRole] = useState<AuthRole>(AUTH_ROLES.client);
   const [email, setEmail] = useState(
     AUTH_EXAMPLE_CREDENTIALS[AUTH_ROLES.client].email,
@@ -100,15 +97,14 @@ export function useLoginForm(texts: LoginFormTexts): UseLoginFormReturn {
         const destination =
           role === AUTH_ROLES.admin ? AUTH_ADMIN_PREFIX : AUTH_CLIENT_HOME_PATH;
 
-        router.replace(destination);
-        router.refresh();
+        window.location.href = destination;
       } catch {
         setError(texts.errors.unknown);
       } finally {
         setIsSubmitting(false);
       }
     },
-    [email, password, role, router, texts.errors],
+    [email, password, role, texts.errors],
   );
 
   return {

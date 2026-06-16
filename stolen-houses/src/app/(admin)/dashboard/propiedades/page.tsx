@@ -2,6 +2,7 @@
 
 import { usePropertyCrud } from "@/features/manage-properties/hooks/use-property-crud";
 import { PROPERTY_CRUD_TEXTS } from "@/i18n/es/property-crud";
+import { AdminTopBar } from "@/shared/ui/admin-top-bar/admin-top-bar";
 import { Feedback } from "@/shared/ui/feedback/feedback";
 import { PropertyCrudForm } from "@/widgets/property-crud-form/ui/property-crud-form";
 import { PropertyCrudList } from "@/widgets/property-crud-list/ui/property-crud-list";
@@ -27,6 +28,7 @@ export default function DashboardPropertiesPage() {
   return (
     <section className={styles.page}>
       <div className={styles.container}>
+        <AdminTopBar backHref="/dashboard" />
         <header className={styles.header}>
           <div className={styles.dividerRow}>
             <span className={styles.divider} aria-hidden="true" />
